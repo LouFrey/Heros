@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+
+p {
+  text-align: center;
+  font-family: 'Roboto';font-size: 14px;
+}
+
+p#clock {
+font-family: 'Helvetica';font-size: 22px;font-weight: bold;
+}
+
+</style>
+</head>
+
+  <body>
+
+<br><br>
+<center><img src="Puri.png" width="150" height="100" style="max-width:100%;height:auto;"></center>
+<p><b>Rules</b></p>
+<p><b>1.</b>Wilk score every 30 days</p>
+<p><b>2.</b>We count monthly biggest winner and biggest loser.</p>
+<p><b>3.</b>We try this out until end of year.</p>
+<p><b>4.</b>If you have suggestions @lourenco or @arsene.</p>
+<p><b>Time until next score:</b></p>
+<p id="clock"></p>
+
+<script>
+var countDownDate = new Date("Oct 31, 2018 23:59:59").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("clock").innerHTML = "Post Score";
+    }
+}, 1000);
+</script>
+
+<center>
+<br>
+<iframe src="https://streamable.com/s/dr26c/sobtlw" width="720" height="405" frameborder="0" allowfullscreen></iframe>
+<br><br><br>
+<br><br>
+  <img src="September.png" width="1160" height="720" style="max-width:100%;height:auto;">
+  <br><br><br>
+</center>
+
+</body>
+</html>
